@@ -21,7 +21,6 @@ class PTClientHelper {
      */
     public static function pt_generate_app_key($apiKey, $name, $description = '', $contactEmail = '', $siteUrl = '') : array {
 
-        return ['key' => '1234'];
         $data = array(
             'name' => $name,
             'description' => $description,
