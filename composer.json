@@ -1,0 +1,29 @@
+{
+    "name": "babadee08/perfecttense",
+    "description": "This is a laravel package wrapper for the Perfect Tense API",
+    "require": {
+        "php": "^7.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Damilare Durojaye",
+            "email": "damilare.durojaye@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Damilare\\PerfectTenseClient\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Damilare\\PerfectTense\\PTClientServiceProvider"
+            ]
+        }
+    }
+}
