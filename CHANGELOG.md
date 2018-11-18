@@ -15,3 +15,5 @@ All notable changes to `:babadee08/perfecttense` will be documented in this file
 
 - Updated the README.md file
 - included the CHANGELOG.md file
+- updated the configuration file
+- simplified the laravel Service provide

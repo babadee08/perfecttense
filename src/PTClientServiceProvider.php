@@ -30,23 +30,10 @@ class PTClientServiceProvider extends ServiceProvider
 
         $this->app->singleton(PTClient::class, function ($app) {
 
-            $api_key = $app->config->get('perfect-tense.api-key');
-            $app_name = $app->config->get('perfect-tense.app-name');
-            $email = $app->config->get('perfect-tense.email');
-            $site_url = $app->config->get('perfect-tense.site-url');
-
-            $response = PTClientHelper::pt_generate_app_key($api_key, $app_name, 'description: Here is the Description', $email, $site_url);
-
-            $appKey = $response['key'];
-
             return new PTClient([
-                'appKey' => $appKey
+                'appKey' => $app->config->get('perfect-tense.app-key')
             ]);
-        });
 
-        /*$this->app->singleton(PerfectTense::class, function ($app) {
-            //return new PerfectTense($app->config->get('perfect-tense.app-name'));
-            return new PerfectTense($app->config->get('perfect-tense.app-name'));
-        });*/
+        });
     }
 }

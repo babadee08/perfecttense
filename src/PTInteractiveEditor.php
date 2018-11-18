@@ -23,14 +23,14 @@ class PTInteractiveEditor {
     /**
      * Constructor for the interactive editor.
      *
-     * @param object $arguments                                 And array containing the below parameters
+     * @param array $arguments                                 And array containing the below parameters
      * @param object $arguments->ptClient                       An instance of the PTClient object (generally, only 1 is ever created)
      * @param object $arguments->data                           The result object returned from PTClient->submitJob
      * @param string $arguments->apiKey                         The user's API key (they must be prompted in some way to enter this.
      *                                                              It can be found here: https://app.perfecttense.com/home)
      * @param boolean $arguments->ignoreNoReplacement=false     Optionally ignore transformations that do not offer replacement text
      */
-    public function __construct($arguments) {
+    public function __construct(array $arguments) {
 
         $this->ptClient = $arguments['ptClient'];
         $this->data = $arguments['data'];
